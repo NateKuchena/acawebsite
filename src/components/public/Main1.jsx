@@ -9,8 +9,7 @@ function Main1() {
       </div>
       <hr className="w-full mt-3" />
       <div className="container pb-5 w-full grid grid-cols-1 lg:grid-cols-1 mt-5 relative">
-        <img src="https://www.creativefabrica.com/wp-content/uploads/2023/02/04/Ornament-frame-PNG-Graphics-59934430-1-1-580x390.png" alt="" className="absolute w-full h-[35rem] top-[-50px] lg:block hidden" />
-        <div className="bg-cover bg-center lg:p-[3rem] container lg:w-[1000px]">
+        <div className="bg-cover bg-center lg:p-[3rem] container! lg:w-[1000px]">
           <div className="flex items-center gap-3 justify-start">
             <img src="/assets/noma.jpg" className="shadow rounded-full w-[80px] lg:w-[90px] h-[80px] lg:h-[90px] object-cover" alt="Chairman" />
             <div className="flex flex-col">
