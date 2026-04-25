@@ -80,13 +80,13 @@ function Navbar() {
                     </div>
                   </Link>
                   <div id="navbarNav" className="ml-6 flex-1">
-                    <ul className="mb-0 flex items-center justify-end gap-1 xl:gap-2 list-none">
+                    <ul className="mb-0 flex items-center justify-end gap-1 xl:gap-2 list-none ">
                       {links.map((link) =>
                         link.isButton ? (
                           <li key={link.href}>
                             <Link
                               href={link.href}
-                              className={`inline-flex items-center justify-center h-[42px] px-4 xl:px-5 rounded-xl text-[13px] xl:text-[14px] font-semibold text-decoration-none transition-all duration-300 ${
+                              className={` inline-flex items-center justify-center h-[42px] px-4 xl:px-5 rounded-xl text-[13px] xl:text-[14px] font-semibold text-decoration-none transition-all duration-300 ${
                                 isAtTop ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-white text-black hover:bg-white/90'
                               }`}
                             >
@@ -98,12 +98,13 @@ function Navbar() {
                             <Link
                               href={link.href}
                               className={`inline-flex items-center justify-center h-[42px] px-3 xl:px-4 rounded-xl text-[13px] xl:text-[14px] font-medium text-decoration-none transition-all duration-300 ${
-                                isAtTop ? 'text-gray-800 hover:bg-gray-100' : 'text-white hover:bg-white/10'
+                                isAtTop ? '!text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
                               }`}
                             >
                               {link.label}
                             </Link>
                           </li>
+                          
                         )
                       )}
                     </ul>
@@ -122,16 +123,16 @@ function Navbar() {
             <div className="relative w-full max-w-full flex items-center justify-between rounded-2xl px-4 py-3 bg-black/40 backdrop-blur-xl border border-white/20 shadow-[0_8px_30px_rgba(0,0,0,0.25)] overflow-hidden">
               <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-r from-white/10 via-white/5 to-transparent" />
               <div className="pointer-events-none absolute top-0 left-0 h-[1px] w-full bg-white/30" />
-              <Link href="/" className="relative z-10 flex flex-1 items-center gap-3 min-w-0 overflow-hidden" onClick={() => setIsOpen(false)}>
+              <Link href="/" className="relative z-10 flex flex-1 items-center gap-3 min-w-0 overflow-hidden no-underline!" onClick={() => setIsOpen(false)}>
                 <img src={mylogo} alt="Amazon Christian Academy Logo" className="w-[42px] h-[42px] object-contain shrink-0" />
                 <div className="flex flex-col leading-tight min-w-0">
-                  <span className="text-white font-semibold text-[13px] truncate">Amazon Christian Academy</span>
+                  <span className="text-white font-semibold text-[11px] truncate ">Amazon Christian Academy</span>
                   <span className="text-white/70 text-[10px] truncate">Filabusi, Insiza District</span>
                 </div>
               </Link>
               <button
                 onClick={toggleMenu}
-                className="relative z-10 flex items-center justify-center w-11 h-11 rounded-xl bg-white/10 border border-white/20 text-white backdrop-blur-md transition duration-300 hover:bg-white/20 shrink-0"
+                className="relative z-10 flex items-center justify-center w-11 h-11 rounded-xl! bg-white/10 border border-white/20 text-white backdrop-blur-md transition duration-300 hover:bg-white/20 shrink-0"
                 aria-label="Toggle menu"
               >
                 {isOpen ? <Close className="text-[28px]" /> : <Menu className="text-[28px]" />}
